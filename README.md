@@ -7,4 +7,4 @@ Al utilizar las recomendaciones de esta guía, usted podrá operar la criptomone
 
 ### Descarga la guia de integracion aqui: 
 
-https://github.com/glufco/glufco-cli/blob/master/Guia_de_integracion_criptoactivo_glufco_v1.1.pdf
+https://github.com/glufco/glufco-cli/blob/master/Guia_de_integracion_criptoactivo_glufco.pdf

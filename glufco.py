@@ -1,8 +1,8 @@
 # Glufco Investment Cryptobank
 # Use Python 3.6 
 # When installing pywaves and cryptos use: sudo pip3 install pywaves cryptos
-version = "Glufco 1.0.0 - Use: Python=3.6.8, PyWaves=0.8.25, cryptos=1.36"
-# [DK] 11/2019 www.glufco.com
+version = "Glufco 1.2 - Use: Python=3.6.8, PyWaves=0.8.25, cryptos=1.36"
+# [DK] 05/2020 www.glufco.com
 
 import sys
 import json
@@ -42,11 +42,32 @@ if modal=="" or modal=="h" or modal=="-h" or modal=="help" or modal=="--help":
     print("                   user2Address - Destination address")
     print("                   amount - Amount to send. Ex: 100000000 for 1 waves")
     print("             Transfer Fee = 0.001 waves")
+    print("tx           Get transaction details")
+    print("             args: coin=waves")
+    print("                   txid")
+    print("txcheck      Check if transaction is valid")
+    print("             args: coin=waves")
+    print("                   txid")
     print("validate     Validate address")
     print("             args: coin=waves")
     print("                   address") 
     print("version      Version")
     print("")
+
+#Transaction check
+if modal=="txcheck":
+    if sys.argv[2]=="waves":
+        v = pw.tx(sys.argv[3])
+        try:
+            if v['height']: print('true')
+        except:
+            print('false')
+
+#Transaction details
+if modal=="tx":
+    if sys.argv[2]=="waves":
+        v = pw.tx(sys.argv[3])
+        print(v)
 
 #Validate Address
 if modal=="validate":
